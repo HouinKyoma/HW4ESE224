@@ -37,8 +37,9 @@ std::string SinglyList::pop_end() {
         return "";
     }
 
+    std::string return_string = this->tail->get_string();
+
     if (this->head == this->tail) {
-        std::string return_string = this->tail->get_string();
         delete this->head;
         this->head = nullptr;
         this->tail = nullptr;
@@ -48,4 +49,5 @@ std::string SinglyList::pop_end() {
     SinglyNode* new_tail = this->tail->get_next();
     delete this->tail;
     this->tail = new_tail;
+    return return_string;
 }

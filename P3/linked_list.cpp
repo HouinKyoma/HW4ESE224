@@ -39,8 +39,9 @@ std::string LinkedList::pop_end() {
         return "";
     }
 
+    std::string return_string = this->tail->get_string();
+
     if (this->head == this->tail) {
-        std::string return_string = this->tail->get_string();
         delete this->head;
         this->head = nullptr;
         this->tail = nullptr;
@@ -51,6 +52,7 @@ std::string LinkedList::pop_end() {
     new_tail->change_previous(nullptr);
     delete this->tail;
     this->tail = new_tail;
+    return return_string;
 }
 
 std::string LinkedList::pop_front() {
@@ -58,8 +60,9 @@ std::string LinkedList::pop_front() {
         return "";
     }
 
+    std::string return_string = this->head->get_string();
+
     if (this->head == this->tail) {
-        std::string return_string = this->tail->get_string();
         delete this->head;
         this->head = nullptr;
         this->tail = nullptr;
@@ -70,6 +73,7 @@ std::string LinkedList::pop_front() {
     new_head->change_next(nullptr);
     delete this->head;
     this->head = new_head;
+    return return_string;
 }
 
 LinkedList::~LinkedList() {
