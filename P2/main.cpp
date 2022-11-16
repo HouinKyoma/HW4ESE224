@@ -1,6 +1,8 @@
 #include "singly_list.h"
 #include <iostream>
 #include <map>
+#include <sstream>
+#include <string>
 
 int main() {
     std::cout << "Elements of the list: " << std::flush;
@@ -8,13 +10,12 @@ int main() {
     int input;
     auto sl = SinglyList();
     
-    while (std::cin) {
-        std::cin >> input;
+    std::string line;
+    std::getline(std::cin, line);
+    std::istringstream iss(line);
+    while (iss >> input) {
         sl.add_to_end(std::to_string(input));
     }
-
-    std::cin.clear();
-    std::cin.ignore(256, '\n');
 
     auto output_sl = SinglyList();
     SinglyNode* ptr1 = sl.get_head();
@@ -24,7 +25,7 @@ int main() {
         return 0;
     }
 
-    output_sl.add_to_end(sl.get_tail()->get_string());
+    output_sl.add_to_end(sl.get_head()->get_string());
     SinglyNode* ptr2 = ptr1->get_next();
 
     bool change_end = false;
@@ -41,6 +42,10 @@ int main() {
         }
         ptr1 = ptr1->get_next();
         ptr2 = ptr2->get_next();
+    }
+
+    if (change_end) {
+        output_sl.get_tail()->change_content("");
     }
 
     std::cout << "Elements of the list after deletion: ";

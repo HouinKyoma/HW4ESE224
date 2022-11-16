@@ -12,11 +12,7 @@ class SinglyList {
     // Constructor
     SinglyList();
     // Destructor
-    ~SinglyList(){
-       while (this->tail != nullptr) {
-        this->pop_end();
-      }
-    }
+    ~SinglyList();
 
     // Methods
     void add_to_end(std::string s);

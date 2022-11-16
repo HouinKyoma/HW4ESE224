@@ -15,7 +15,7 @@ void SinglyList::add_to_end(std::string s) {
         return;
     }
 
-    new_ptr->change_next(this->tail);
+    this->tail->change_next(new_ptr);
     this->tail = new_ptr;
 }
 
@@ -50,4 +50,10 @@ std::string SinglyList::pop_end() {
     delete this->tail;
     this->tail = new_tail;
     return return_string;
+}
+
+SinglyList::~SinglyList() {
+    while (this->tail != nullptr) {
+        this->pop_end();
+    }
 }
