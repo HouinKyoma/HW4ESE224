@@ -1,12 +1,12 @@
 #ifndef SINGLEY_LIST_H
 #define SINGLEY_LIST_H
 
-#include "node.h"
+#include "singley_node.h"
 
 class SingleyList {
     // Members
-    Node* head;
-    Node* tail;
+    SingleyNode* head;
+    SingleyNode* tail;
 
   public:
     // Constructor
