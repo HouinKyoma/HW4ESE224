@@ -1,22 +1,22 @@
-#ifndef SINGLEY_NODE_H
-#define SINGLEY_NODE_H
+#ifndef SINGLY_NODE_H
+#define SINGLY_NODE_H
 #include <string>
 
-class SingleyNode {
+class SinglyNode {
     // Members
     std::string s;
-    SingleyNode* next;
+    SinglyNode* next;
 
   public:
     // Constructor
-    SingleyNode();
-    SingleyNode(std::string s, SingleyNode* next);
+    SinglyNode();
+    SinglyNode(std::string s, SinglyNode* next);
 
     // Methods
     void change_content(std::string s);
-    void change_next(SingleyNode* next);
+    void change_next(SinglyNode* next);
     std::string get_string();
-    SingleyNode* get_next();
+    SinglyNode* get_next();
 };
 
-#endif //SINGLEY_NODE_H
+#endif //SINGLY_NODE_H

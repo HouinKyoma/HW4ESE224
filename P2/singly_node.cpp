@@ -1,27 +1,27 @@
-#include "singley_node.h"
+#include "singly_node.h"
 
-SingleyNode::SingleyNode() {
+SinglyNode::SinglyNode() {
     this->s = "";
     this->next = nullptr;
 }
 
-SingleyNode::SingleyNode(std::string s, SingleyNode* next) {
+SinglyNode::SinglyNode(std::string s, SinglyNode* next) {
     this->s = s;
     this->next = next;
 }
 
-void SingleyNode::change_content(std::string s) {
+void SinglyNode::change_content(std::string s) {
     this->s = s;
 }
 
-void SingleyNode::change_next(SingleyNode* next) {
+void SinglyNode::change_next(SinglyNode* next) {
     this->next = next;
 }
 
-std::string SingleyNode::get_string() {
+std::string SinglyNode::get_string() {
     return this->s;
 }
 
-SingleyNode* SingleyNode::get_next() {
+SinglyNode* SinglyNode::get_next() {
     return this->next;
 }
