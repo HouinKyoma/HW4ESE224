@@ -1,18 +1,18 @@
-#ifndef SINGLEY_LIST_H
-#define SINGLEY_LIST_H
+#ifndef Singly_LIST_H
+#define Singly_LIST_H
 
-#include "singley_node.h"
+#include "Singly_node.h"
 
-class SingleyList {
+class SinglyList {
     // Members
-    SingleyNode* head;
-    SingleyNode* tail;
+    SinglyNode* head;
+    SinglyNode* tail;
 
   public:
     // Constructor
-    SingleyList();
+    SinglyList();
     // Destructor
-    ~SingleyList();
+    ~SinglyList();
 
     // Methods
     void add_to_end(std::string s);
@@ -20,4 +20,4 @@ class SingleyList {
     std::string pop_end();
 };
 
-#endif //SINGLEY_LIST_H
+#endif //Singly_LIST_H
