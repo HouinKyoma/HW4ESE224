@@ -19,7 +19,6 @@ class LinkedList {
     void add_to_front(std::string s);
     std::string pop_end();
     std::string pop_front();
-    
     Node get_head() {
       return *head;
     }
