@@ -28,7 +28,7 @@ int main() {
             if (std::cin.fail()) {
                 std::cout << "Input not an integer, return to menu" << std::endl;
                 std::cin.clear();
-                std::cin.ignore(256,'\n');
+                std::cin.ignore(256, '\n');
                 std::cout << std::endl;
                 break;
             }
