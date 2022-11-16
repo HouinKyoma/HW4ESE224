@@ -11,6 +11,8 @@ class LinkedList {
   public:
     // Constructor
     LinkedList();
+    // Destructor
+    ~LinkedList();
 
     // Methods
     void add_to_end(std::string s);

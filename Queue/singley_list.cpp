@@ -48,3 +48,9 @@ std::string SingleyList::pop_end() {
     delete this->tail;
     this->tail = new_tail;
 }
+
+SingleyList::~SingleyList() {
+    while (this->tail != nullptr) {
+        this->pop_end();
+    }
+}

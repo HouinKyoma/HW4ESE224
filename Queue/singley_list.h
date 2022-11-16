@@ -11,6 +11,8 @@ class SingleyList {
   public:
     // Constructor
     SingleyList();
+    // Destructor
+    ~SingleyList();
 
     // Methods
     void add_to_end(std::string s);

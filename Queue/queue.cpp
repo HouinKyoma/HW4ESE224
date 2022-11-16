@@ -1,16 +1,23 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "node.h"
+#include "linked_list.h"
 
 class Queue {
+    // Members
+    LinkedList ll;
   public:
-    void insert(std::string s) {
-
+    // Constructor
+    Queue() {
+        ll = LinkedList();
     }
 
-    void remove() {
+    void insert(std::string s) {
+        ll.add_to_end(s);
+    }
 
+    std::string remove() {
+        return ll.pop_front();
     }
 
     void display() {
