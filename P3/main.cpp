@@ -1,0 +1,43 @@
+#include "queue.h"
+
+int main() {
+    std::string menu = "Queue Main Menu\n"
+                       "1. Insert\n"
+                       "2. Remove\n"
+                       "3. Display\n"
+                       "Others to exit\n"
+                       "Enter Your Choice: ";
+    
+    bool exit_menu = false;
+    Queue q = Queue();
+
+    while (exit_menu == false) {
+        std::cout << menu << std::flush;
+        int choice;
+        std::cin >> choice;
+
+        switch (choice)
+        {
+        case 1:
+            int input;
+            std::cout << "Enter the Value to be Inserted: " << std::flush;
+            std::cin >> input;
+            q.insert(std::to_string(input));
+            break;
+        
+        case 2:
+            std::cout << "The Value that has been Removed is: " << q.remove() << std::endl;
+            break;
+        
+        case 3:
+            q.display();
+            break;
+
+        default:
+            exit_menu = true;
+            break;
+        }
+    }
+
+    return 0;
+}

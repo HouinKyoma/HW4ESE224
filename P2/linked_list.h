@@ -20,11 +20,11 @@ class LinkedList {
     std::string pop_end();
     std::string pop_front();
     
-    Node get_head() {
-      return *head;
+    Node* get_head() {
+      return head;
     }
-    Node get_tail() {
-      return *tail;
+    Node* get_tail() {
+      return tail;
     }
 };
 
