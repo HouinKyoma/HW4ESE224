@@ -39,6 +39,8 @@ int main() {
         } else {
             change_end = true;
         }
+        ptr1 = ptr1->get_next();
+        ptr2 = ptr2->get_next();
     }
 
     std::cout << "Elements of the list after deletion: ";
@@ -46,6 +48,7 @@ int main() {
 
     while (ptr1 != nullptr) {
         std::cout << ptr1->get_string() << " ";
+        ptr1 = ptr1->get_next();
     }
     std::cout << std::endl;
 
