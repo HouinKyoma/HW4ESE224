@@ -12,12 +12,26 @@ class SinglyList {
     // Constructor
     SinglyList();
     // Destructor
-    ~SinglyList();
+    ~SinglyList(){
+      while (this->tail != nullptr) {
+        this->pop_end();
+    }
+}
+    
 
     // Methods
     void add_to_end(int data_);
     void add_to_front(int data_);
     int pop_end();
+    int size(){
+      SinglyNode* cursor = head;
+      int size = 0;
+      while(cursor!=nullptr){
+        cursor = cursor->get_next();
+        size++;
+      }
+      return size;
+    }
     SinglyNode get_head() {
       return *head;
     }

@@ -45,6 +45,8 @@ int SinglyList::pop_end() {
     }
 
     SinglyNode* new_tail = this->tail->get_next();
+    int ret = this->tail->get_data();
     delete this->tail;
     this->tail = new_tail;
+    return ret;
 }
