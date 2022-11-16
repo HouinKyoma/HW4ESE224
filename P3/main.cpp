@@ -28,14 +28,17 @@ int main() {
             if (std::cin.fail()) {
                 std::cout << "Input not an integer, return to menu" << std::endl;
                 std::cin.clear();
-                std::cin.ignore(256,'\n');
+                std::cin.ignore(256, '\n');
+                std::cout << std::endl;
                 break;
             }
             q.insert(std::to_string(input));
+
             break;
         
         case 2:
-            std::cout << "The Value that has been Removed is: " << q.remove() << std::endl;
+            std::cout << "The Value that has been Removed is: " << q.remove() << std::endl << std::endl;
+            std::cout << std::endl;
             break;
         
         case 3:
