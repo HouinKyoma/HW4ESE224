@@ -63,9 +63,15 @@ std::string LinkedList::pop_front() {
         this->tail = nullptr;
         return "";
     }
-    
+
     Node* new_head = this->head->get_previous();
     new_head->change_next(nullptr);
     delete this->head;
     this->head = new_head;
+}
+
+LinkedList::~LinkedList() {
+    while (this->tail != nullptr) {
+        this->pop_front();
+    }
 }
