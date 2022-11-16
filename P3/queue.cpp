@@ -12,10 +12,11 @@ class Queue {
         ll = LinkedList();
     }
 
+    // Methods
     void insert(std::string s) {
         ll.add_to_end(s);
     }
-
+    
     std::string remove() {
         return ll.pop_front();
     }
