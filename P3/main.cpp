@@ -15,6 +15,9 @@ int main() {
         std::cout << menu << std::flush;
         int choice;
         std::cin >> choice;
+        if (std::cin.fail()) {
+            exit(0);
+        }
 
         switch (choice)
         {
@@ -22,6 +25,10 @@ int main() {
             int input;
             std::cout << "Enter the Value to be Inserted: " << std::flush;
             std::cin >> input;
+            if (std::cin.fail()) {
+                std::cout << "Input not an integer, return to menu" << std::endl;
+                break;
+            }
             q.insert(std::to_string(input));
             break;
         
