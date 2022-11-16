@@ -22,6 +22,11 @@ class Queue {
     }
 
     void display() {
-        
+        Node* head = ll.get_head();
+        while (head != nullptr) {
+            std::cout << head->get_string() << " ";
+            head = head->get_previous();
+        }
+        std::cout << std::endl;
     }
 };
