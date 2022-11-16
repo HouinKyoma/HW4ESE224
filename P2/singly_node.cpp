@@ -1,4 +1,4 @@
-#include "singley_node.h"
+#include "singly_node.h"
 
 SingleyNode::SingleyNode() {
     this->s = "";

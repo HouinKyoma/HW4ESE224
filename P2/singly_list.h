@@ -1,7 +1,7 @@
 #ifndef Singly_LIST_H
 #define Singly_LIST_H
 
-#include "Singly_node.h"
+#include "singly_node.h"
 
 class SinglyList {
     // Members
