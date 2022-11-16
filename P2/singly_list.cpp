@@ -38,10 +38,11 @@ std::string SinglyList::pop_end() {
     }
 
     if (this->head == this->tail) {
+        std::string return_string = this->tail->get_string();
         delete this->head;
         this->head = nullptr;
         this->tail = nullptr;
-        return "";
+        return return_string;
     }
 
     SinglyNode* new_tail = this->tail->get_next();

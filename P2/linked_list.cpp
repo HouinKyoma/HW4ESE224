@@ -40,10 +40,11 @@ std::string LinkedList::pop_end() {
     }
 
     if (this->head == this->tail) {
+        std::string return_string = this->tail->get_string();
         delete this->head;
         this->head = nullptr;
         this->tail = nullptr;
-        return "";
+        return return_string;
     }
 
     Node* new_tail = this->tail->get_next();
@@ -58,10 +59,11 @@ std::string LinkedList::pop_front() {
     }
 
     if (this->head == this->tail) {
+        std::string return_string = this->tail->get_string();
         delete this->head;
         this->head = nullptr;
         this->tail = nullptr;
-        return "";
+        return return_string;
     }
 
     Node* new_head = this->head->get_previous();
