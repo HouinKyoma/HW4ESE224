@@ -1,4 +1,4 @@
-#include "singley_list.h"
+#include "singly_list.h"
 #include "node.h"
 
 SinglyList::SinglyList() {
