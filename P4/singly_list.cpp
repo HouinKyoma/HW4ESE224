@@ -38,10 +38,11 @@ int SinglyList::pop_end() {
     }
 
     if (this->head == this->tail) {
+        int ret = head->get_data();
         delete this->head;
         this->head = nullptr;
         this->tail = nullptr;
-        return 0; 
+        return ret; 
     }
 
     SinglyNode* new_tail = this->tail->get_next();

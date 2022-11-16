@@ -28,8 +28,18 @@ int main(){
 }
 
 void legalMove(Stack& a, Stack& b){
-    if(a.peek()<b.peek()){
-        cout<<"Moved disk "<<a.peek()<<"from pole"<<a.polenumber<<" to pole "<<b.polenumber<<endl;
+    if(a.peek()==0){
+
+        cout<<"Moved disk "<<b.peek()<<"from pole "<<a.polenumber<<" to pole "<<b.polenumber<<endl;
+        a.push(b.pop());
+    }
+    else if(b.peek()==0){
+
+        cout<<"Moved disk "<<a.peek()<<"from pole "<<a.polenumber<<" to pole "<<b.polenumber<<endl;
+        b.push(a.pop());
+    }
+    else if(a.peek()<b.peek()){
+        cout<<"Moved disk "<<a.peek()<<"from pole "<<a.polenumber<<" to pole "<<b.polenumber<<endl;
         b.push(a.pop());
     }
     else{
